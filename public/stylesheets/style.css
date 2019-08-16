@@ -1,8 +1,46 @@
 body {
+  font-family: Verdana;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 400px;
+  height: 800px;
+  margin: auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#show-page {
+  display: grid;
+  font-family: Verdana;
+  font-size: 20px;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 50px 200px 200x;
+  grid-area: main;
+  grid-template-areas:
+    "nav" "nav"
+    "main" "main"
+    "add" "add"
+}
+#add-dest {
+  font-family: Verdana;
+  font-size: 20px;
+  align-content: center;
+}
+
+#show-page div {
+  margin: 5px;
+}
+
+input {
+  font-size: 12px;
 }

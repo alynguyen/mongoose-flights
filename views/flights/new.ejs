@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>New Flight</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -15,7 +15,15 @@
           <input type="text" name="flightNo">
         </label><br><br>
         <label>Departs:
-          <input type="datetime-local" name="departs" value="<% ">
+          <input type="date" name="departs">
+        </label><br><br>
+        <label>Airport:
+          <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DAL">DAL</option>
+            <option value="LAX">LAX</option>
+            <option value="SEA">SEA</option>
+          </select>
         </label><br><br>
         <input type="submit" value="Add Flight">
       </form>

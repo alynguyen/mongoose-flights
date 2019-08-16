@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show Details</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Flights Details</h1>
+    <section id="show-page">
+      <div>Airline: </div>
+      <div><%= flight.airline %></div>
+      <div>Flight No: </div>
+      <div><%= flight.flightNo %></div>
+      <div>Departs: </div>
+      <div><%= flight.departs %></div>
+      <div>Airport: </div>
+      <div><%= flight.airport %></div>
+      <div>Destination: </div>
+      <div><%= flight.destination %></div>
+    </section>
+    <h1>Add Flight Destination</h1>
+    <section id="add-dest">
+      <form id="add-review-form" method="POST"
+        action="/flights/<%= flight._id %>/destination">
+      <label>Airport: </label>
+      <select name="airport">
+          <option value="AUS">AUS</option>
+          <option value="DAL">DAL</option>
+          <option value="LAX">LAX</option>
+          <option value="SEA">SEA</option>
+      </select><br><br>
+      <label>Arrival:</label>
+      <input type="date" name="arrival"><br><br>
+      <input type="submit" value="Add Destination">
+      </form>
+    </section>
+  </body>
+</html>
+
