@@ -8,14 +8,15 @@
   <title>Document</title>
 </head>
 <body>
-  <form id="add-ticket-form" action="/tickets" method="POST">
-    <label>Flight: <%= flight.flightNo %></label>
-    <label>Seat:</labeL>
+  <form id="add-ticket-form" action="/flights/<%= flight._id %>/tickets/new" method="POST">
+    <label>Flight: <%= flight.flightNo %></label><br>
+    <label>Flight: <%= flight._id %></label><br>
+    <label>Seat:</label>
     <input name="seat" required pattern="[A-F][1-9]\d?">
     <label>Price:</label>
     <input type="text" name="price">
+    <input type="hidden" name="flight" value="<%= flight._id %>">
     <input type="submit" value="Add Ticket">
   </form>
-  
 </body>
 </html>
