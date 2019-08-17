@@ -30,7 +30,7 @@ const flightSchema = new Schema({
     enum: ['AUS', 'DAL', 'LAX', 'SEA'],
     default: 'SEA'
   },
-  destination: [destinationSchema] 
+  destination: [destinationSchema],
 }, {
   timestamps: true
 });

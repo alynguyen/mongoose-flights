@@ -15,12 +15,32 @@
       <div><%= flight.departs %></div>
       <div>Airport: </div>
       <div><%= flight.airport %></div>
-      <div>Destination: </div>
-      <div><%= flight.destination %></div>
+      <!-- <div>Destination: </div> -->
+      <section id="sec-dest">
+        <h1>Destinations</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Airport</th>
+                <th>Arrival</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% flight.destination.forEach(function(f) { %>
+                <tr>
+                  <td><%= f.airport %></td>
+                  <td><%= f.arrival %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </section>
+      <!-- <div><%= flight.destination %></div> -->
     </section>
+    <a href="/flights/<%= flight._id %>/tickets/new">Add Tickets</a>
     <h1>Add Flight Destination</h1>
     <section id="add-dest">
-      <form id="add-review-form" method="POST"
+      <form id="add-dest-form" method="POST"
         action="/flights/<%= flight._id %>/destination">
       <label>Airport: </label>
       <select name="airport">
